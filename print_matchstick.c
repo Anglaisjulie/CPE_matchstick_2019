@@ -18,6 +18,8 @@ int parsing_matchstick(char **argv)
         stick->last_line -= 1;
     if (print_matches(stick) == 84)
         return (84);
+    my_putstr("Your turn:\n");
+    input_game(stick);
     return (0);
 }
 

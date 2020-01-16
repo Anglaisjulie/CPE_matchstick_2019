@@ -1,21 +1,18 @@
 /*
 ** EPITECH PROJECT, 2019
-** my_putstr.c
+** my_strlen.c
 ** File description:
-** my_putstr.c
+** my_strlen.c
 */
 
 #include "fonctions.h"
 
-int my_putstr(char *str)
+int my_strlen(char const *str)
 {
     int i = 0;
 
-    if (str == 0)
-        return (0);
     while (str[i] != '\0') {
-        my_putchar(str[i]);
         i++;
     }
-    return (0);
+    return (i);
 }
