@@ -5,7 +5,7 @@
 ** my_printf.c
 */
 
-#include "fonctions.h"
+#include "../fonctions.h"
 
 void flags(va_list ap, char *str, int i)
 {

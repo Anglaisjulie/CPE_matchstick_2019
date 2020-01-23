@@ -5,6 +5,8 @@
 ** my_atoi.c
 */
 
+#include "../fonctions.h"
+
 int	my_atoi(char *str)
 {
     int nb = 0;

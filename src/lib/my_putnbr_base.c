@@ -5,7 +5,7 @@
 ** my_putnbr_base.c
 */
 
-#include "fonctions.h"
+#include "../fonctions.h"
 
 int my_putnbr_base(int nbr, char const *base)
 {

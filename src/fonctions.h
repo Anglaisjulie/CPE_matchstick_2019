@@ -14,32 +14,43 @@
 #include <stdarg.h>
 
 typedef struct stick_s {
-    int take_max;
-    int lines;
-    int last_line;
+    int *matches_per_line;
+    int *spaces;
+    int give_line;
+    int remove_max_matches;
+    int nb_matches_last_line;
+    int total_matches;
+    int matches_line;
     int left;
     int right;
-    char **matches;
-    char *input_matches;
+    int round;
     char *input_line;
-    int matches_line;
+    char *input_matches;
+    char **matches;
 } stick_t;
 
 //FONCTIONS PRINCIPAUX
-int parsing_matchstick(char **);
-int print_matches(stick_t *);
-int binary(stick_t *);
+int matchstick(char **, int);
+void matches_lines(stick_t *);
+int game_print(stick_t *);
 void right_and_left(stick_t *, int);
 void add_binary(stick_t *, int);
-void print_stick(stick_t *, int);
-int input_game(stick_t *);
-int error_input_matches(stick_t *, size_t);
-int error_input_line(stick_t *, size_t);
-int count_matches(stick_t *, int);
-int error_input_li(stick_t *);
+int binary(stick_t *);
+void print_stars(stick_t *);
+int game_loop(stick_t *, int);
+int game_input(stick_t *, int);
+int error_input_matches(stick_t *);
+int error_input_line(stick_t *, int);
+int error_input_li(stick_t *, int);
 int error_input_mat(stick_t *);
-
-
+int count_matches(stick_t *, int);
+int pyramid(stick_t *);
+int condition_eof(int);
+int ia(stick_t *);
+void print_ia(stick_t *);
+void print_lose(stick_t *);
+void print_sticks(stick_t *, int, int, int);
+int check_number(stick_t *, int);
 
 //MY_PRINTF
 int my_printf(char *, ...);

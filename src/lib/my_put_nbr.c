@@ -2,12 +2,12 @@
 ** EPITECH PROJECT, 2019
 ** undefined
 ** File description:
-** my_put_unsigned_int.c
+** my_put_nbr.c
 */
 
-#include "fonctions.h"
+#include "../fonctions.h"
 
-int my_put_unsigned_nbr(unsigned int nbr)
+int my_put_nbr(int nbr)
 {
     if (nbr < 0) {
         nbr = nbr * (-1);

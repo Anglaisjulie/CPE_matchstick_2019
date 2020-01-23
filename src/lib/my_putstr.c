@@ -5,7 +5,7 @@
 ** my_putstr.c
 */
 
-#include "fonctions.h"
+#include "../fonctions.h"
 
 int my_putstr(char *str)
 {

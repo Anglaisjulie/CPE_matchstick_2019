@@ -7,20 +7,24 @@
 
 CC		=	gcc -fdiagnostics-color
 
-FILE_LIST =		print_matchstick.c \
-				binary_stick.c \
-				main.c \
-				my_putstr.c \
-				my_putchar.c \
-				my_atoi.c \
-				count.c \
-				input_matchs.c \
-				my_printf.c \
-				flags.c 	\
-				my_put_nbr.c \
-				my_strlen.c \
-				my_put_unsigned_nbr.c \
-				my_putnbr_base.c \
+
+FILE_LIST =		src/main.c \
+				src/matchstick.c \
+				src/print_game.c \
+				src/input_game.c \
+				src/intelligent_artificial.c \
+				src/count.c \
+				src/eof.c \
+				src/binary_stick.c \
+				src/lib/my_putstr.c \
+				src/lib/my_putchar.c \
+				src/lib/my_atoi.c \
+				src/lib/my_printf.c \
+				src/lib/flags.c 	\
+				src/lib/my_put_nbr.c \
+				src/lib/my_strlen.c \
+				src/lib/my_put_unsigned_nbr.c \
+				src/lib/my_putnbr_base.c \
 
 
 SRC		= 		$(FILE_LIST)
@@ -37,7 +41,8 @@ $(NAME):	$(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
 
 clean:
-	rm -f *.o
+	rm -f src/*.o
+	rm -f src/lib/*.o
 
 fclean: clean
 	rm -f $(NAME)

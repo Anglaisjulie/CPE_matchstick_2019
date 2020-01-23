@@ -5,8 +5,7 @@
 ** flags.c
 */
 
-#include <stdarg.h>
-#include "fonctions.h"
+#include "../fonctions.h"
 
 int flags_b_p(va_list ap, int i, char *str)
 {
