@@ -9,19 +9,18 @@
 
 int game_input(stick_t *stick, int eof)
 {
-    if (eof == -1)
-        return (eof);
-    if (eof != 84)
+    if (eof != 84) {
         my_putstr("\nYour turn:\n");
-    eof = error_input_line(stick, eof);
-    if (eof == -1)
-        return (eof);
-    if (eof == 84)
         eof = error_input_line(stick, eof);
-    if (eof == 84)
-        game_input(stick, eof);
+    }
     if (eof == -1)
         return (eof);
+    if (eof == 84) {
+        while (eof == 84)
+            eof = error_input_line(stick, eof);
+            if (eof == -1)
+                return (eof);
+    }
     return (0);
 }
 

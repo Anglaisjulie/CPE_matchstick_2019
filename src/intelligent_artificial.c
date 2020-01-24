@@ -19,7 +19,7 @@ int ia(stick_t *stick)
     stick->matches[i][last] = ' ';
     stick->matches_per_line[i]--;
     stick->total_matches--;
-    my_printf("\nAI's turn...\nAI removed 1 match(es) from line %d\n", i);
+    my_printf("\nAI's turn...\nAI removed 1 match(es) from line %d\n", i + 1);
     if (stick->total_matches == 0)
         return (-6);
     return (0);
