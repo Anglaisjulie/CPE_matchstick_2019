@@ -64,12 +64,11 @@ int game_loop(stick_t *stick, int eof)
             my_printf("I lost... snif... but I'll get you next time!!");
             return (0);
         }
-        if (stick->total_matches >= 0) {
+        if (stick->total_matches >= 0)
             eof = game_input(stick, eof);
-            stick->total_matches -= my_atoi(stick->input_matches);
-        }
         if (eof == -1)
             return (eof);
+        stick->total_matches -= my_atoi(stick->input_matches);
     }
     print_lose(stick);
     my_printf("You lost, too bad...");
