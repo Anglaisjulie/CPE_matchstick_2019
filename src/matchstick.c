@@ -24,7 +24,7 @@ int matchstick(char **argv, int eof)
     eof = game_loop(stick, eof);
     if (eof == -1)
         return (eof);
-    return (0);
+    return (eof);
 }
 
 int pyramid(stick_t *stick)
@@ -62,7 +62,7 @@ int game_loop(stick_t *stick, int eof)
         a = game_print(stick);
         if (a == -6) {
             my_printf("I lost... snif... but I'll get you next time!!");
-            return (0);
+            return (1);
         }
         if (stick->total_matches >= 0)
             eof = game_input(stick, eof);
@@ -72,5 +72,5 @@ int game_loop(stick_t *stick, int eof)
     }
     print_lose(stick);
     my_printf("You lost, too bad...");
-    return (0);
+    return (2);
 }
